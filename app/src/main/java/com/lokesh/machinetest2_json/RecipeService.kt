@@ -14,7 +14,7 @@ interface RecipeService {
     companion object {
         fun getInstance(): RecipeService {
             val interceptor = HttpLoggingInterceptor().apply {
-                var level = HttpLoggingInterceptor.Level.BODY
+                 level = HttpLoggingInterceptor.Level.BODY
             }
             val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
 
